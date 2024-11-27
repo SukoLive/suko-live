@@ -24,3 +24,4 @@ spl-token-2022 = { version="=3.0.4", features = [ "no-entrypoint" ] }
 spl-token = { version = "4.0.1", features = [ "no-entrypoint" ] }
 spl-token-metadata-interface = { version = "=0.3.5"}
 num = "0.4.3"
+solana-security-txt = "1.1.1"

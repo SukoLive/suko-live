@@ -7,6 +7,22 @@ pub mod model;
 use anchor_lang::prelude::*;
 use instructions::*;
 
+#[cfg(not(feature = "no-entrypoint"))]
+use {solana_security_txt::security_txt};
+
+#[cfg(not(feature = "no-entrypoint"))]
+security_txt! {
+    // Required fields
+    name: "SukoLive",
+    project_url: "https://www.suko.live/",
+    contacts: "email:support@suko.live",
+    policy: "https://github.com/SukoLive/suko-live/blob/main/SECURITY.md",
+
+    // Optional Fields
+    preferred_languages: "en",
+    source_code: "https://github.com/SukoLive/suko-live"
+}
+
 declare_id!("Gczm5pMWsEgEW8NFHoq54whvzmfja9gaimRzZtxTizfH");
 
 #[program]
